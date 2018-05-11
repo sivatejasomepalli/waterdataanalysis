@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Title</title>
+</head>
+<body data-ng-app="app" ng-controller="MainCtrl" background="water-service.jpg">
+<div class="container-fluid text-center">
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="col-md-4">
+            <h4>Major water problems received</h4>
+            <table class="table table-primary table-bordered text-center text-lg-center">
+                <thead>
+                <tr class="text-center">
+                    <th bgcolor="aqua">zipcode</th>
+                    <th bgcolor="aqua"> No of requests</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="x in kcvalue">
+                    <td bgcolor="#fff8dc">{{x.zip_code}}</td>
+                    <td bgcolor="#fff8dc">{{x.count_case_id}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script src="top5.js"> </script>
+</body>
+</html>

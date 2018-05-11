@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Title</title>
+</head>
+<body  data-ng-app="app" ng-controller="MainCtrl" bgcolor="#fff5ee" background="city.jpeg">
+<script src="zipcodewithrequest.js"> </script>
+<div class="container-fluid text-center" >
+    <br>
+    <br>
+    <br>
+            <h1 align="center">Requests Received as per zipcode</h1>
+    <br>
+
+    <div ng-app="app" ng-controller="MainCtrl">
+
+        <h1>zipcode:</h1>
+            <select ng-model="zipcode">
+                <option ng-repeat="x in kcvalue" value="{{x.count_case_id}}">{{x.zip_code}}</option>
+            </select>
+
+        <h1>Requests Received:{{zipcode}}</h1>
+
+        <div class="container-fluid text-center" >
+            <div  ng-init="myVar = 'zip2.html'">
+                <h1> <a ng-href="{{myVar}}">click here to see chart</a></h1>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
